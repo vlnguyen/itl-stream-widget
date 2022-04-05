@@ -15,7 +15,9 @@ Create a browser source in OBS with this URL.
 https://itlwidget.surge.sh/?entrantId=1
 ```
 But replace `?entrantId=1` with your entrant id from the [ITL Online 2022 Leaderboard](https://itl2022.groovestats.com/leaderboard).
-Your entrant id should appear in the address bar. ![image](https://user-images.githubusercontent.com/11725545/161716485-54be6c86-030d-4c94-bd52-64143538a243.png)
+Your entrant id should appear in the address bar.
+
+![image](https://user-images.githubusercontent.com/11725545/161716485-54be6c86-030d-4c94-bd52-64143538a243.png)
 
 ## Development
 
