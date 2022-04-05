@@ -80,7 +80,7 @@ const App: React.FC = () => {
 
   const getStreamerStats = useCallback(async (entrantId: number) => {
     Axios.request({
-      url: `http://localhost:8080/api/public/getStreamerStats.php?entrantId=${entrantId}`,
+      url: `https://itl2022.groovestats.com/api/public/getStreamerStats.php?entrantId=${entrantId}`,
     }).then((resp) =>
       setEntrants(
         resp.data.data.entrants.map((entrant: any) => new Entrant(entrant))
