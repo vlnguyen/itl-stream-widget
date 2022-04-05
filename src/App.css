@@ -22,12 +22,11 @@
   grid-row: 1;
 }
 .entrant_name {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   padding-top: 1px;
   padding-bottom: 1px;
   white-space: nowrap;
-  overflow: hidden;
 }
 .entrant_id{
   font-size: 8px;
