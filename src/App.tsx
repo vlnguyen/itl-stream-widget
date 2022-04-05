@@ -93,6 +93,9 @@ const App: React.FC = () => {
     let params = new URLSearchParams(search);
     let entrantId = parseInt(params.get("entrantId") || "");
     getStreamerStats(entrantId);
+
+    const interval = setInterval(() => getStreamerStats(entrantId), 60 * 1000);
+    return () => clearInterval(interval);
   }, [getStreamerStats]);
 
   const self = useMemo(() => {
