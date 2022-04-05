@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Axios from "axios";
 import classNames from "classnames";
+import ItcLogo from "./itc-logo.png";
 import "./App.css";
 
 class Entrant {
@@ -109,7 +110,7 @@ const App: React.FC = () => {
         <div className="wrapper">
           <div>
             <img
-              src={self.profileImgUrl}
+              src={self.profileImgUrl || ItcLogo}
               width="100px"
               height="100px"
               alt="Avatar"
