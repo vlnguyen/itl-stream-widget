@@ -78,9 +78,9 @@ function formatDifference(diff: number) {
 const App: React.FC = () => {
   const [entrants, setEntrants] = useState<Entrant[]>([]);
 
-  const getStreamerStats = useCallback(async () => {
+  const getStreamerStats = useCallback(async (entrantId: number) => {
     Axios.request({
-      url: "http://localhost:8080/api/public/getStreamerStats.php?entrantId=1",
+      url: `http://localhost:8080/api/public/getStreamerStats.php?entrantId=${entrantId}`,
     }).then((resp) =>
       setEntrants(
         resp.data.data.entrants.map((entrant: any) => new Entrant(entrant))
@@ -89,7 +89,10 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    getStreamerStats();
+    let search = window.location.search;
+    let params = new URLSearchParams(search);
+    let entrantId = parseInt(params.get("entrantId") || "");
+    getStreamerStats(entrantId);
   }, [getStreamerStats]);
 
   const self = useMemo(() => {
